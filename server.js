@@ -23,7 +23,7 @@ const {port,allowedDomains,mongodb_connect} =  config;
 
 
 app.use(cors({
-  origin: process.env.REMOTE_CLIENT_APP,
+  origin: "https://linksharingappfrontend.onrender.com/",
   credentials: true,
 }));
 
