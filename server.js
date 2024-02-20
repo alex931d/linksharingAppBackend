@@ -27,7 +27,11 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use(helmet());
+app.use(helmet({
+  referrerPolicy: {
+    policy: 'strict-origin-when-cross-origin'
+  }
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
